@@ -1,0 +1,60 @@
+package com.libtiff.callmeback.callmeback;
+
+/**
+ * Created by Antonis on 8/7/2016.
+ */
+public class Android {
+    static String[] code = new String[]
+            {
+                    "Cyta (Cyprus)",
+                    "Mtn (Cyprus)", "CallSat (Cyprus)",
+                    "Vodafone CU (Greece)",
+                    "Globul (United Kingdom)",
+                    "MTS (Ukraine)", "Beeline (Russia)",
+                    "Rostelecom (Russia)",
+                    "Vodafone (Romania)",
+                    "Proximus (Belgium)",
+                    "TMobile (Montenegro)",
+                    "Telstra (Australia)",
+                    "Virgin Mobile (USA)",
+                    "Telekom (USA)",
+                    "DigiCell (Latin America)",
+                    "Zain Jordan (Jordan)",
+                    "Etisalat (Egypt)",
+                    "MTN (Nigeria)",
+                    "Glo (Nigeria)",
+                    "AirTel (India)",
+                    "TrueCorp (Thailand)",
+                    "Ais (Thailand)",
+                    "MobiTel (Sri Lanka)",
+                    "MTN (South Africa)",
+                    "TruTeq (South Africa)",
+                    "CellC (South Africa)",
+                    "UCell(Uzbekistan)",
+                    "Korektel (Iraq)",
+                    "Orange (Cameroon)",
+                    "Orange (Uganda)",
+                    "TeleCel (Zimbabwe)",
+                    "EcoNet (Zimbabwe)",
+                    "Vodafone (Albania)",
+                    "AirTel (Nigeria)",
+                    "Etilasat (Nigeria)",
+                    "Telekom (South Africa)",
+                    "PrimeTel (Cyprus)",
+                    "NetOne (Zimbabwe)",
+                    "SafariCom (Kenya)",
+                    "YUMobile (Kenya)",
+                    "Flow (Jamaica)",
+                    "VodaCom (South Africa)",
+                    "Virgin Mobile (South Africa)",
+                    "Ooredoo (Qatar)",
+                    "DTAC Happy (Thailand)",
+                    "RennaMobile (Oman)",
+                    "Life :) (Belarus)",
+                    "Tata Docomo (Docomo)",
+                    "Skinny Mobile (New Zealand)",
+                    "Mobile Vikings (Poland)",
+                    "Dialog (Sri Lanka)",
+                    "FriendiMobile (Oman)"
+            };
+}

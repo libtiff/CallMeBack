@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/bgimgfinal"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    android:weightSum="1.0">
+
+    <ImageView
+        android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:id="@+id/imageView"
+        android:background="0x106000d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo2" />
+
+    <TextView
+        android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:id="@+id/credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="www.libtiff.eu5.net" />
+
+    <TextView
+        android:textAppearance="?unknown_attr_ref: 1010040"
+        android:id="@+id/linebreak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <LinearLayout
+        android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="18dp"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="UNKNOWN_DATA_0x3201"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btn_choose"
+            android:background="0x1080006"
+            android:layout_width="wrap_content"
+            android:layout_height="UNKNOWN_DATA_0x3201"
+            android:text="Select your network provider"
+            style="?unknown_attr_ref: 101032e" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/linebreak4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" " />
+
+    <TextView
+        android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:id="@+id/tv_android"
+        android:padding="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1.0">
+
+        <TextView
+            android:textAppearance="?unknown_attr_ref: 1010040"
+            android:id="@+id/linebreakleft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   " />
+
+        <ImageButton
+            android:id="@+id/btnContacts"
+            android:background="0x0"
+            android:clickable="false"
+            android:layout_width="UNKNOWN_DATA_0x2601"
+            android:layout_height="UNKNOWN_DATA_0x2601"
+            android:src="@drawable/contacts"
+            android:onClick="Contacts"
+            style="?unknown_attr_ref: 1010072" />
+
+        <TextView
+            android:textAppearance="?unknown_attr_ref: 1010040"
+            android:id="@+id/linebreak2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" " />
+
+        <EditText
+            android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+            android:id="@+id/phoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_weight="0.95"
+            android:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|number|numberSigned|numberDecimal|numberPassword|phone"
+            style="?unknown_attr_ref: 101006e" />
+
+        <TextView
+            android:textAppearance="?unknown_attr_ref: 1010040"
+            android:id="@+id/linebreak3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" " />
+
+        <ImageButton
+            android:id="@+id/btnSend"
+            android:background="0x0"
+            android:layout_width="UNKNOWN_DATA_0x2b01"
+            android:layout_height="match_parent"
+            android:src="@drawable/sent"
+            android:onClick="send"
+            style="?unknown_attr_ref: 1010072" />
+
+        <TextView
+            android:textAppearance="?unknown_attr_ref: 1010040"
+            android:id="@+id/linebreakright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   " />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.gms.ads.AdView
+            ads:id="@+id/adView"
+            ads:layout_width="match_parent"
+            ads:layout_height="wrap_content"
+            ads:layout_alignParentBottom="true"
+            ads:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-9082725429338291/3652795560" />
+    </RelativeLayout>
+</LinearLayout>
