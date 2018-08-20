@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
     android:scaleType="centerCrop"
     android:weightSum="1.0">
 
     <ImageView
-        android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
         android:id="@+id/imageView"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
         android:background="@color/colorPrimary" />
 
     <TextView
-        android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
         android:id="@+id/credits"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
         android:text="www.libtiff.eu5.net" />
 
     <TextView
@@ -29,24 +29,17 @@
         android:text="" />
 
     <LinearLayout
-        android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-        <TextView
-            android:textSize="18dp"
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="" />
 
         <Button
             android:id="@+id/btn_choose"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Select your network provider"
-            />
+            android:text="Select your network provider" />
     </LinearLayout>
 
     <TextView
@@ -56,16 +49,16 @@
         android:text=" " />
 
     <TextView
-        android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
         android:id="@+id/tv_android"
-        android:padding="40dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:padding="40dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:weightSum="1.0">
 
         <TextView
@@ -77,10 +70,10 @@
 
         <ImageButton
             android:id="@+id/btnContacts"
-            android:clickable="false"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:onClick="Contacts" />
+            android:onClick="Contacts"
+            android:src="@android:drawable/sym_contact_card" />
 
         <TextView
             android:id="@+id/linebreak2"
@@ -89,12 +82,13 @@
             android:text=" " />
 
         <EditText
-            android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
             android:id="@+id/phoneNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
+            android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
             android:layout_weight="0.95"
+            android:ems="10"
+            android:hint="Recepient Number"
             android:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|number|numberSigned|numberDecimal|numberPassword|phone" />
 
         <TextView
@@ -105,9 +99,10 @@
 
         <ImageButton
             android:id="@+id/btnSend"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:onClick="send" />
+            android:onClick="send"
+            android:src="@android:drawable/ic_menu_send" />
 
         <TextView
             android:id="@+id/linebreakright"
