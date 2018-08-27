@@ -3,16 +3,27 @@
 Current Supported Provider List:
 
 "Albania (Vodafone)"
+
 "Australia (Telstra)"
+
 "Belarus (Life)"
+
 "Belgium (Proximus)"
+
 "Brazil (DigiCell)"
+
 "Cameroon (Orange)"
+
 "Cyprus (CallSat)"
+
 "Cyprus (Cyta)"
+
 "Cyprus (MTN)"
+
 "Cyprus (PremeTel)"
+
 "Docomo (Tata Docomo)"
+
 "Egypt (Etisalat)"
 "Greece (Vodafone CU"
 "Iraq (Korektel)"
