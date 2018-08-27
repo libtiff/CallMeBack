@@ -1,7 +1,7 @@
 # CallMeBack
 
 Current Supported Provider List:
-"Albania (Vodafone)",
+"Albania (Vodafone)"
 "Australia (Telstra)"
 					"Belarus (Life)"
 					"Belgium (Proximus)"
