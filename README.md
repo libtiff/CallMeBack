@@ -20,7 +20,7 @@ Current Supported Provider List:
 
 "Cyprus (MTN)"
 
-"Cyprus (PremeTel)"
+"Cyprus (PrimeTel)"
 
 "Docomo (Tata Docomo)"
 
