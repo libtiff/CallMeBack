@@ -1,11 +1,16 @@
 # CallMeBack
 
 Current Supported Provider List:
+
 "Albania (Vodafone)"
+
 "Australia (Telstra)"
-					"Belarus (Life)"
-					"Belgium (Proximus)"
-					"Brazil (DigiCell)"
+
+"Belarus (Life)"
+
+"Belgium (Proximus)"
+
+"Brazil (DigiCell)"
 					"Cameroon (Orange)"
 					"Cyprus (CallSat)"
 					"Cyprus (Cyta)"
