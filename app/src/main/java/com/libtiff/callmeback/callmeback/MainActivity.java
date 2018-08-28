@@ -58,264 +58,317 @@ public class MainActivity extends AppCompatActivity implements AlertDialogRadio.
     public void onPositiveClick(int position) {
         this.position = position;
         switch (position) {
+
+//VODAFONE ALBANIA
             case 0:
-                this.code = null;
-                this.code = this.Hashtag + "120" + this.Hashtag;
-                this.endhash = 0;
-                break;
-            case 1:
-                this.code = null;
-                this.code = "*100*";
-                this.endhash = 1;
-                break;
-            case 2:
-                this.code = null;
-                this.code = "*100*";
-                this.endhash = 1;
-                break;
-            case 3:
-                this.code = null;
-                this.code = this.Hashtag;
-                this.endhash = 0;
-                break;
-            case 4:
-                this.code = null;
-                this.code = "*133*";
-                this.endhash = 1;
-                break;
-            case 5:
-                this.code = null;
-                this.code = "*104*";
-                this.endhash = 1;
-                break;
-            case 6:
-                this.code = null;
-                this.code = "*9119*";
-                this.endhash = 1;
-                break;
-            case 7:
-                this.code = null;
-                this.code = "*135*";
-                this.endhash = 1;
-                break;
-            case 8:
-                this.code = null;
-                this.code = "*120*" + this.Hashtag + "2" + this.Hashtag;
-                this.endhash = 1;
-                break;
-            case 9:
-                this.code = null;
-                this.code = this.Hashtag + "111*";
-                this.endhash = 1;
-                break;
-            case 10:
-                this.code = null;
-                this.code = "*345*";
-                this.endhash = 1;
-                break;
-            case 11:
-                this.code = null;
-                this.code = this.Hashtag + "125" + this.Hashtag + "5" + this.Hashtag;
-                this.endhash = 1;
-                break;
-            case 12:
-                this.code = null;
-                this.code = "*125*";
-                this.endhash = 1;
-                break;
-            case 13:
-                this.code = null;
-                this.code = "*140*";
-                this.endhash = 1;
-                break;
-            case 14:
-                this.code = null;
-                this.code = "*126*";
-                this.endhash = 1;
-                break;
-            case 15:
-                this.code = null;
-                this.code = "*100*";
-                this.endhash = 1;
-                break;
-            case 16:
-                this.code = null;
-                this.code = "*266*1*";
-                this.endhash = 1;
-                break;
-            case 17:
-                this.code = null;
-                this.code = "*133*";
-                this.endhash = 1;
-                break;
-            case 18:
-                this.code = null;
-                this.code = "*125*";
-                this.endhash = 1;
-                break;
-            case 19:
-                this.code = null;
-                this.code = "*140*";
-                this.endhash = 1;
-                break;
-            case 20:
-                this.code = null;
-                this.code = "*922*1*";
-                this.endhash = 1;
-                break;
-            case 21:
-                this.code = null;
-                this.code = "*222*";
-                this.endhash = 1;
-                break;
-            case 22:
-                this.code = null;
-                this.code = this.Hashtag + "359*";
-                this.endhash = 1;
-                break;
-            case 23:
-                this.code = null;
-                this.code = "*121*";
-                this.endhash = 1;
-                break;
-            case 24:
-                this.code = null;
-                this.code = "*140*";
-                this.endhash = 1;
-                break;
-            case 25:
-                this.code = null;
-                this.code = "*111*";
-                this.endhash = 1;
-                break;
-            case 26:
-                this.code = null;
-                this.code = "*125*";
-                this.endhash = 1;
-                break;
-            case 27:
-                this.code = null;
-                this.code = "*213*";
-                this.endhash = 1;
-                break;
-            case 28:
-                this.code = null;
-                this.code = this.Hashtag + "146*";
-                this.endhash = 1;
-                break;
-            case 29:
-                this.code = null;
-                this.code = "*100*2*";
-                this.endhash = 1;
-                break;
-            case 30:
-                this.code = null;
-                this.code = "*140*";
-                this.endhash = 1;
-                break;
-            case 31:
-                this.code = null;
-                this.code = "*555*";
-                this.endhash = 1;
-                break;
-            case 32:
                 this.code = null;
                 this.code = this.Hashtag + "123" + this.Hashtag + "2" + this.Hashtag;
                 this.endhash = 1;
                 break;
+//TELSTRA
+            case 1:
+                this.code = null;
+                this.code = this.Hashtag + "125" + this.Hashtag + "5" + this.Hashtag;
+                this.endhash = 1;
+                break;
+//LIFE BELARUS
+            case 2:
+                this.code = null;
+                this.code = "*120*2*";
+                this.endhash = 1;
+                break;
+//PROXIMUS
+            case 3:
+                this.code = null;
+                this.code = this.Hashtag + "111*";
+                this.endhash = 1;
+                break;
+//DIGICELL
+            case 4:
+                this.code = null;
+                this.code = "*126*";
+                this.endhash = 1;
+                break;
+//ORANGE CAMEROON
+            case 5:
+                this.code = null;
+                this.code = this.Hashtag + "146*";
+                this.endhash = 1;
+                break;
+//CALLSAT
+            case 6:
+                this.code = null;
+                this.code = "*100*";
+                this.endhash = 1;
+                break;
+//CYTA
+            case 7:
+                this.code = null;
+                this.code = this.Hashtag + "120" + this.Hashtag;
+                this.endhash = 0;
+                break;
+//MTN
+            case 8:
+                this.code = null;
+                this.code = "*100*";
+                this.endhash = 1;
+                break;
+//PRIMETEL CYPRUS
+            case 9:
+                this.code = null;
+                this.code = "*130*";
+                this.endhash = 1;
+                break;
+//TATA DOCOMO DOCOMO
+            case 10:
+                this.code = null;
+                this.code = "*678*";
+                this.endhash = 1;
+                break;
+//ETISALAT
+            case 11:
+                this.code = null;
+                this.code = "*266*1*";
+                this.endhash = 1;
+                break;
+//VODAFONE CU
+            case 12:
+                this.code = null;
+                this.code = this.Hashtag;
+                this.endhash = 0;
+                break;
+//KOREKTEL IRAQ
+            case 13:
+                this.code = null;
+                this.code = "*213*";
+                this.endhash = 1;
+                break;
+//AIRTEL INDIA
+            case 14:
+                this.code = null;
+                this.code = "*140*";
+                this.endhash = 1;
+                break;
+//FLOW JAMAICA
+            case 15:
+                this.code = null;
+                this.code = "*126*";
+                this.endhash = 1;
+                break;
+//ZAIN JORDAN
+            case 16:
+                this.code = null;
+                this.code = "*100*";
+                this.endhash = 1;
+                break;
+//SAFARICOM KENYA
+            case 17:
+                this.code = null;
+                this.code = "*130*";
+                this.endhash = 1;
+                break;
+//YUMobile KENYA
+            case 18:
+                this.code = null;
+                this.code = "*133*";
+                this.endhash = 1;
+                break;
+//TMOBILE
+            case 19:
+                this.code = null;
+                this.code = "*345*";
+                this.endhash = 1;
+                break;
+//SKINNY MOBILE NEW ZEALAND
+            case 20:
+                this.code = null;
+                this.code = "*888*8*3*";
+                this.endhash = 1;
+                break;
+//AIRTEL NIGERIA
+            case 21:
+                this.code = null;
+                this.code = "*140*";
+                this.endhash = 1;
+                break;
+//ETILASAT NIGERIA
+            case 22:
+                this.code = null;
+                this.code = "*266*1*";
+                this.endhash = 1;
+                break;
+//MTN NIGERIA
+            case 23:
+                this.code = null;
+                this.code = "*133*";
+                this.endhash = 1;
+                break;
+//GLO NIGERIA
+            case 24:
+                this.code = null;
+                this.code = "*125*";
+                this.endhash = 1;
+                break;
+//FRIENDIMOBILE OMAN
+            case 25:
+                this.code = null;
+                this.code = "*104*";
+                this.endhash = 1;
+                break;
+//RENNA MOBILE OMAN
+            case 26:
+                this.code = null;
+                this.code = "*181*42*";
+                this.endhash = 1;
+                break;
+//MOBILE VIKINGS POLAND
+            case 27:
+                this.code = null;
+                this.code = "*120*";
+                this.endhash = 1;
+                break;
+//OOREDOO QATAR
+            case 28:
+                this.code = null;
+                this.code = "*103*";
+                this.endhash = 1;
+                break;
+//VODAFONE ROMANIA
+            case 29:
+                this.code = null;
+                this.code = "*120*" + this.Hashtag + "2" + this.Hashtag;
+                this.endhash = 1;
+                break;
+//BEELINE
+            case 30:
+                this.code = null;
+                this.code = "*9119*";
+                this.endhash = 1;
+                break;
+//ROSTELECOM
+            case 31:
+                this.code = null;
+                this.code = "*135*";
+                this.endhash = 1;
+                break;
+//MTN SOUTH AFRICA
+            case 32:
+                this.code = null;
+                this.code = "*121*";
+                this.endhash = 1;
+                break;
+//TRUTEQ SOUTH AFRICA
             case 33:
                 this.code = null;
                 this.code = "*140*";
                 this.endhash = 1;
                 break;
+//CELLC SOUTH AFRICA
             case 34:
                 this.code = null;
-                this.code = "*266*1*";
+                this.code = "*111*";
                 this.endhash = 1;
                 break;
+//TELEKOM SOUTH AFRICA
             case 35:
                 this.code = null;
                 this.code = "*140*";
                 this.endhash = 1;
                 break;
+//VODACOM SOUTH AFRICA
             case 36:
-                this.code = null;
-                this.code = "*130*";
-                this.endhash = 1;
-                break;
-            case 37:
-                this.code = null;
-                this.code = "*134" + this.Hashtag + "7";
-                this.endhash = 1;
-                break;
-            case 38:
-                this.code = null;
-                this.code = "*130*";
-                this.endhash = 1;
-                break;
-            case 39:
-                this.code = null;
-                this.code = "*133*";
-                this.endhash = 1;
-                break;
-            case 40:
-                this.code = null;
-                this.code = "*126*";
-                this.endhash = 1;
-                break;
-            case 41:
                 this.code = null;
                 this.code = "*140*";
                 this.endhash = 1;
                 break;
-            case 42:
+//VIRGIN MOBILE SOUTH AFRICA
+            case 37:
                 this.code = null;
                 this.code = "*125*";
                 this.endhash = 1;
                 break;
-            case 43:
+//MOBITEL SRI LANKA
+            case 38:
                 this.code = null;
-                this.code = "*103*";
+                this.code = this.Hashtag + "359*";
                 this.endhash = 1;
                 break;
-            case 44:
-                this.code = null;
-                this.code = "*114*";
-                this.endhash = 1;
-                break;
-            case 45:
-                this.code = null;
-                this.code = "*181*42*";
-                this.endhash = 1;
-                break;
-            case 46:
-                this.code = null;
-                this.code = "*120*2*";
-                this.endhash = 1;
-                break;
-            case 47:
-                this.code = null;
-                this.code = "*678*";
-                this.endhash = 1;
-                break;
-            case 48:
-                this.code = null;
-                this.code = "*888*8*3*";
-                this.endhash = 1;
-                break;
-            case 49:
-                this.code = null;
-                this.code = "*120*";
-                this.endhash = 1;
-                break;
-            case 50:
+//DIALOG SRI LANKA
+            case 39:
                 this.code = null;
                 this.code = this.Hashtag + "356*";
                 this.endhash = 1;
                 break;
-            case 51:
+//AIS THAILAND
+            case 40:
+                this.code = null;
+                this.code = "*222*";
+                this.endhash = 1;
+                break;
+//DTAC HAPPY THAILAND
+            case 41:
+                this.code = null;
+                this.code = "*114*";
+                this.endhash = 1;
+                break;
+//TRUECORP THAILAND
+            case 42:
+                this.code = null;
+                this.code = "*922*1*";
+                this.endhash = 1;
+                break;
+//ORANGE UGANDA
+            case 43:
+                this.code = null;
+                this.code = "*100*2*";
+                this.endhash = 1;
+                break;
+//MTS
+            case 44:
                 this.code = null;
                 this.code = "*104*";
+                this.endhash = 1;
+                break;
+//GLOBUL
+            case 45:
+                this.code = null;
+                this.code = "*133*";
+                this.endhash = 1;
+                break;
+//VIRGIN MOBILE (USA)
+            case 46:
+                this.code = null;
+                this.code = "*125*";
+                this.endhash = 1;
+                break;
+//TELEKOM (USA)
+            case 47:
+                this.code = null;
+                this.code = "*140*";
+                this.endhash = 1;
+                break;
+//UCELL UZBEKISTAN
+            case 48:
+                this.code = null;
+                this.code = "*125*";
+                this.endhash = 1;
+                break;
+//ECONET ZIMBABWE
+            case 49:
+                this.code = null;
+                this.code = "*555*";
+                this.endhash = 1;
+                break;
+//NETONE ZIMBABWE
+            case 50:
+                this.code = null;
+                this.code = "*134" + this.Hashtag + "7";
+                this.endhash = 1;
+                break;
+//TELECEL ZIMBABWE
+            case 51:
+                this.code = null;
+                this.code = "*140*";
                 this.endhash = 1;
                 break;
         }
