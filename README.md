@@ -1,107 +1,52 @@
 # CallMeBack
+allMeBack App uses the latest , most-used and well-known USSD codes around the world providing you a fast , reliable and simplistic environment to send those messages faster than ever.
 
-Current Supported Provider List:
+CallMeBack Features:
 
-"Albania (Vodafone)"
+Total Number of Countries Supported: 32
+Total Carriers Supported: 53
 
-"Australia (Telstra)"
+- Albania (Vodafone)
+- Australia (Telstra)
+- Belarus (Life :) )
+- Belgium (Proximus)
+- Cameroon (Orange)
+- Cyprus ( Cyta , MTN , PrimeTel , CallSat)
+- Docomo (Tata Docomo)
+- Egypt (Etilasat)
+- Greece (Vodafone-CU)
+- Iraq (Korektel)
+- India (Airtel)
+- Jamaica (Flow)
+- Jordan (ZainJordan)
+- Kenya (SafariCom , YuMobile)
+- Latin America (Digicel)
+- Montenegro (TMobile)
+- New Zealand (Skinny Mobile)
+- Nigeria (MTN , EtilaSat , AirTel , Glo)
+- Oman (RennaMobile , FriendiMobile)
+- Poland (Mobile Vikings)
+- Qatar (Ooredoo)
+- Romania (Vodafone)
+- Russia (Beeline , Rostelecom)
+- South Africa (MTN , TruTeq , CellC , Glo , Vodacom , Virgin Mobile , )
+- Sri Lanka (MobiTel , Dialog)
+- Thailand (TrueCorp , Ais , DTAC Happy)
+- Uganda (Orange)
+- Ukraine (MTS)
+- United Kingdom (Globul)
+- USA (Telekom , VirginMobile)
+- Uzbekistan (UCell)
+- Zimbabwe (TeleCel , EcoNet , NetOne)
 
-"Belarus (Life)"
+Some mobile carriers (providers) let you use this service after you have reached the minimum limit of credits on your pre-paid card.(1 Euro). Next time you are out of credits , use this device and send your free CallMeBack message to your beloved ones. This program DOESNT need WiFi , GPRS or any credits to work. 
+Some providers , have a monthly limit so make sure you talk with your provider before deciding to spam this.
 
-"Belgium (Proximus)"
+In this release , the countries based on the mobile carrier that are supported are the following:
+(If you want your country-provider to be added just leave us a comment below and we will include it in the next release.)
 
-"Brazil (DigiCell)"
-
-"Cameroon (Orange)"
-
-"Cyprus (CallSat)"
-
-"Cyprus (Cyta)"
-
-"Cyprus (MTN)"
-
-"Cyprus (PrimeTel)"
-
-"Docomo (Tata Docomo)"
-
-"Egypt (Etisalat)"
-
-"Greece (Vodafone CU"
-
-"Iraq (Korektel)"
-
-"India (AirTel)"
-
-"Jamaica (Flow)"
-
-"Jordan (Zain Jordan)"
-
-"Kenya (SafariCom)"
-
-"Kenya (YUMobile)"
-
-"Montenegro (TMobile)"
-
-"New Zealand (Skinny Mobile)"
-
-"Nigerial (AirTel)"
-
-"Nigeria (Etilasat)"
-
-"Nigeria (MTN)"
-
-"Nigeria (Glo)"
-
-"Oman (FriendiMobile)"
-
-"Oman (RennaMobile)"
-
-"Poland (Mobile Vikings)"  
-
-"Qatar (Ooredoo)"
-
-"Romania (Vodafone)"
-
-"Russia (Beeline)"
-
-"Russia (Rostelecom)"
-
-"South Africa (MTN)"
-
-"South Africa (TruTeq)"
-
-"South Africa (CellC)"
-
-"South Africa (Telekom)"
-
-"South Africa (VodaCom)"
-
-"South Africa (Virgin Mobile)"
-
-"Sri Lanka (Mobitel)"
-
-"Sri Lanka (Dialog)"
-
-"Thailand (Ais)"
-
-"Thailand (DTAC Happy)"
-
-"Thailand (TrueCorp)"
-
-"Uganda (Orange)"
-
-"Ukraine (MTS)"
-
-"United Kingdom(Globul)"
-
-"United States (Virgin Mobile)"
-
-"United States(Telekom)"
-
-"Uzbekistan (Ucell)"
-
-"Zimbabwe (EcoNet)"
-
-"Zimbabwe (NetOne)"
-
-"Zimbabwe (TeleCel)"
+IMPORTANT NOTE:
+CallMeBack App isn't endorsed by any of the mobile carriers listed and 
+doesn't reflect the views , opinions or anyone officially involved in producing or managing them.
+Images/icons/logos are trademarks or registered trademarks of their respectful owners and we claim no rights. 
+If any provider wants their service to be unlisted from the application feel free to contact us.
