@@ -1,4 +1,4 @@
-package com.libtiff.callmeback.callmeback;
+package libtiff.example.callmebackapp;
 
 /**
  * Created by Antonis on 8/7/2016.

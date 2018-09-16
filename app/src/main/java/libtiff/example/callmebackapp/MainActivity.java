@@ -1,29 +1,30 @@
-package com.libtiff.callmeback.callmeback;
+package libtiff.example.callmebackapp;
 
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
-//import com.google.android.gms.ads.AdRequest.Builder;
-//import com.google.android.gms.ads.AdView;
-import com.libtiff.callmeback.callmeback.AlertDialogRadio;
-import com.libtiff.callmeback.callmeback.MainActivity;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
 
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
+import com.google.android.gms.ads.AdRequest.Builder;
+import com.google.android.gms.ads.AdView;
+
 
 public class MainActivity extends AppCompatActivity implements AlertDialogRadio.AlertPositiveListener {
+    private AdView mAdView;
     ImageButton Contacts;
     String Hashtag = Uri.encode("#");
     String code;
@@ -54,8 +55,11 @@ public class MainActivity extends AppCompatActivity implements AlertDialogRadio.
         this.Contacts = (ImageButton) findViewById(R.id.btnContacts);
         this.send = (ImageButton) findViewById(R.id.btnSend);
         this.phonenum = (EditText) findViewById(R.id.phoneNumber);
-        //((AdView) findViewById(R.id.adView)).loadAd(new Uri.Builder().build());
-        ((ImageButton) findViewById(R.id.btn_choose)).setColorFilter(Color.argb(150, 155, 155, 155));
+
+        MobileAds.initialize(this,"ca-app-pub-9082725429338291~9699329161");
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         ((ImageButton) findViewById(R.id.btn_choose)).setOnClickListener(new C07071());
     }
     public void onPositiveClick(int position) {
