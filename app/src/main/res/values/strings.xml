@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Send CallMeBack</string>
+    <string name="app_name">CallMeBack</string>
     <string name="hello">Hello World, MainActivity!</string>
     <string name="str_btn_choose">Network Carrier</string>
 </resources>

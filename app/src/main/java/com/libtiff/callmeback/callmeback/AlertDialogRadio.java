@@ -68,7 +68,7 @@ public class AlertDialogRadio extends DialogFragment {
         AlertDialog.Builder b = new AlertDialog.Builder(getActivity());
 
         /** Setting a title for the window */
-        b.setTitle("Select your Network Carrier (Provider)");
+        b.setTitle("Select your Network Carrier");
 
         /** Setting items to the alert dialog */
         b.setSingleChoiceItems(Android.code, position, null);

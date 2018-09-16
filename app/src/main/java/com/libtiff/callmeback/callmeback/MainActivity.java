@@ -3,6 +3,8 @@ package com.libtiff.callmeback.callmeback;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +17,7 @@ import android.widget.Toast;
 //import com.google.android.gms.ads.AdRequest.Builder;
 //import com.google.android.gms.ads.AdView;
 import com.libtiff.callmeback.callmeback.AlertDialogRadio;
-import com.libtiff.callmeback.callmeback.R;
+import com.libtiff.callmeback.callmeback.MainActivity;
 
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -31,7 +33,8 @@ public class MainActivity extends AppCompatActivity implements AlertDialogRadio.
     ImageButton send;
     String temp = "";
 
-    class C07071 implements OnClickListener {
+    class C07071 implements OnClickListener
+    {
         C07071() {
         }
 
@@ -52,9 +55,9 @@ public class MainActivity extends AppCompatActivity implements AlertDialogRadio.
         this.send = (ImageButton) findViewById(R.id.btnSend);
         this.phonenum = (EditText) findViewById(R.id.phoneNumber);
         //((AdView) findViewById(R.id.adView)).loadAd(new Uri.Builder().build());
-        ((Button) findViewById(R.id.btn_choose)).setOnClickListener(new C07071());
+        ((ImageButton) findViewById(R.id.btn_choose)).setColorFilter(Color.argb(150, 155, 155, 155));
+        ((ImageButton) findViewById(R.id.btn_choose)).setOnClickListener(new C07071());
     }
-
     public void onPositiveClick(int position) {
         this.position = position;
         switch (position) {
