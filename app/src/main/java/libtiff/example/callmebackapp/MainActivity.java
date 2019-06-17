@@ -1,30 +1,39 @@
 package libtiff.example.callmebackapp;
 
 import android.app.FragmentManager;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.TelephonyManager;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+
+import org.w3c.dom.Text;
 
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-import com.google.android.gms.ads.AdRequest.Builder;
-import com.google.android.gms.ads.AdView;
-
 
 public class MainActivity extends AppCompatActivity implements AlertDialogRadio.AlertPositiveListener {
     private AdView mAdView;
+    private InterstitialAd interstitialAd;
+    private TextView txtload,txtcarriercode,txtcarrier;
+
     ImageButton Contacts;
     String Hashtag = Uri.encode("#");
     String code;
@@ -33,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements AlertDialogRadio.
     int position = 0;
     ImageButton send;
     String temp = "";
+
 
     class C07071 implements OnClickListener
     {
@@ -55,13 +65,54 @@ public class MainActivity extends AppCompatActivity implements AlertDialogRadio.
         this.Contacts = (ImageButton) findViewById(R.id.btnContacts);
         this.send = (ImageButton) findViewById(R.id.btnSend);
         this.phonenum = (EditText) findViewById(R.id.phoneNumber);
+        this.txtload= (TextView) findViewById(R.id.txtload);
+        this.txtcarriercode = (TextView) findViewById(R.id.txtcarriercode);
+        this.txtcarrier=(TextView) findViewById(R.id.txtcarrier);
+        String tempval = loadcarrier();
 
+
+        txtcarrier.setText(SIMOP());
+
+        if (tempval != null) {
+            txtload.setText("✅");
+            txtcarriercode.setText(tempval);
+        }
+        else {
+            txtload.setText("❌");
+            txtcarriercode.setText("-");
+        }
         MobileAds.initialize(this,"ca-app-pub-9082725429338291~9699329161");
+
+        ////////////////////////Banner
         mAdView = findViewById(R.id.adView);
+
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+        //InterAds
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId("ca-app-pub-9082725429338291/4148172654");
+        interstitialAd.loadAd(new AdRequest.Builder().build());
+
+        interstitialAd.setAdListener(new AdListener(){
+            @Override
+            public void onAdClosed()
+            {
+                //startActivity(new Intent(MainActivity.this,MainActivity.class));
+                interstitialAd.loadAd(new AdRequest.Builder().build());
+            }
+        });
+
+        ///////////////////////////////////////////////////////////////////////////////
         ((ImageButton) findViewById(R.id.btn_choose)).setOnClickListener(new C07071());
     }
+
+    public void intAd(){
+        if (interstitialAd.isLoaded())
+        {
+            interstitialAd.show();
+        }
+    }
+
     public void onPositiveClick(int position) {
         this.position = position;
         switch (position) {
@@ -78,308 +129,369 @@ public class MainActivity extends AppCompatActivity implements AlertDialogRadio.
                 this.code = this.Hashtag + "125" + this.Hashtag + "5" + this.Hashtag;
                 this.endhash = 1;
                 break;
-//LIFE BELARUS
+//AIRTEL
             case 2:
+                this.code = null;
+                this.code = "*121*5";
+                this.endhash = 1;
+                break;
+//BANGLALINK
+            case 3:
+                this.code = null;
+                this.code = "*126*";
+                this.endhash = 1;
+                break;
+//GRAMEENPHONE
+            case 4:
+                this.code = null;
+                this.code = "*123*";
+                this.endhash = 1;
+                break;
+//TELENOR
+            case 5:
+                this.code = null;
+                this.code = "*133*";
+                this.endhash = 1;
+                break;
+//LIFE BELARUS
+            case 6:
                 this.code = null;
                 this.code = "*120*2*";
                 this.endhash = 1;
                 break;
 //PROXIMUS
-            case 3:
+            case 7:
                 this.code = null;
                 this.code = this.Hashtag + "111*";
                 this.endhash = 1;
                 break;
 //DIGICELL
-            case 4:
+            case 8:
                 this.code = null;
                 this.code = "*126*";
                 this.endhash = 1;
                 break;
 //ORANGE CAMEROON
-            case 5:
+            case 9:
                 this.code = null;
                 this.code = this.Hashtag + "146*";
                 this.endhash = 1;
                 break;
 //CALLSAT
-            case 6:
+            case 10:
                 this.code = null;
                 this.code = "*100*";
                 this.endhash = 1;
                 break;
 //CYTA
-            case 7:
+            case 11:
                 this.code = null;
                 this.code = this.Hashtag + "120" + this.Hashtag;
                 this.endhash = 0;
                 break;
 //MTN
-            case 8:
+            case 12:
                 this.code = null;
                 this.code = "*100*";
                 this.endhash = 1;
                 break;
 //PRIMETEL CYPRUS
-            case 9:
+            case 13:
                 this.code = null;
                 this.code = "*130*";
                 this.endhash = 1;
                 break;
 //TATA DOCOMO DOCOMO
-            case 10:
+            case 14:
                 this.code = null;
                 this.code = "*678*";
                 this.endhash = 1;
                 break;
 //ETISALAT
-            case 11:
+            case 15:
                 this.code = null;
                 this.code = "*266*1*";
                 this.endhash = 1;
                 break;
 //VODAFONE CU
-            case 12:
+            case 16:
                 this.code = null;
                 this.code = this.Hashtag;
                 this.endhash = 0;
                 break;
-//KOREKTEL IRAQ
-            case 13:
-                this.code = null;
-                this.code = "*213*";
-                this.endhash = 1;
-                break;
 //AIRTEL INDIA
-            case 14:
+            case 17:
                 this.code = null;
                 this.code = "*140*";
                 this.endhash = 1;
                 break;
+//AIRCEL INDIA
+            case 18:
+                this.code = null;
+                this.code = "*243*10#";
+                this.endhash = 0;
+                break;
+//VODAFONE INDIA
+            case 19:
+                this.code = null;
+                this.code = "*131*";
+                this.endhash = 1;
+                break;
+//KOREKTEL IRAQ
+            case 20:
+                this.code = null;
+                this.code = "*213*";
+                this.endhash = 1;
+                break;
 //FLOW JAMAICA
-            case 15:
+            case 21:
                 this.code = null;
                 this.code = "*126*";
                 this.endhash = 1;
                 break;
 //ZAIN JORDAN
-            case 16:
+            case 22:
                 this.code = null;
                 this.code = "*100*";
                 this.endhash = 1;
                 break;
 //SAFARICOM KENYA
-            case 17:
+            case 23:
                 this.code = null;
                 this.code = "*130*";
                 this.endhash = 1;
                 break;
 //YUMobile KENYA
-            case 18:
+            case 24:
                 this.code = null;
                 this.code = "*133*";
                 this.endhash = 1;
                 break;
+//MALDIVES
+            case 25:
+                this.code = null;
+                this.code = "*100*";
+                this.endhash = 1;
+                break;
 //TMOBILE
-            case 19:
+            case 26:
                 this.code = null;
                 this.code = "*345*";
                 this.endhash = 1;
                 break;
 //SKINNY MOBILE NEW ZEALAND
-            case 20:
+            case 27:
                 this.code = null;
                 this.code = "*888*8*3*";
                 this.endhash = 1;
                 break;
 //AIRTEL NIGERIA
-            case 21:
+            case 28:
                 this.code = null;
                 this.code = "*140*";
                 this.endhash = 1;
                 break;
 //ETILASAT NIGERIA
-            case 22:
+            case 29:
                 this.code = null;
                 this.code = "*266*1*";
                 this.endhash = 1;
                 break;
 //MTN NIGERIA
-            case 23:
+            case 30:
                 this.code = null;
                 this.code = "*133*";
                 this.endhash = 1;
                 break;
 //GLO NIGERIA
-            case 24:
+            case 31:
                 this.code = null;
                 this.code = "*125*";
                 this.endhash = 1;
                 break;
 //FRIENDIMOBILE OMAN
-            case 25:
+            case 32:
                 this.code = null;
                 this.code = "*104*";
                 this.endhash = 1;
                 break;
 //RENNA MOBILE OMAN
-            case 26:
+            case 33:
                 this.code = null;
                 this.code = "*181*42*";
                 this.endhash = 1;
                 break;
+//JAZZ PAKISTAN
+            case 34:
+                this.code = null;
+                this.code = "*131*1"+this.Hashtag;
+                this.endhash = 1;
+                break;
+//TELENOR PAKISTAN
+            case 35:
+                this.code = null;
+                this.code = "*11"+this.Hashtag+"03";
+                this.endhash = 1;
+                break;
+//ZONG PAKISTAN
+            case 36:
+                this.code = null;
+                this.code = "*100*";
+                this.endhash = 1;
+                break;
 //MOBILE VIKINGS POLAND
-            case 27:
+            case 37:
                 this.code = null;
                 this.code = "*120*";
                 this.endhash = 1;
                 break;
 //OOREDOO QATAR
-            case 28:
+            case 38:
                 this.code = null;
                 this.code = "*103*";
                 this.endhash = 1;
                 break;
 //VODAFONE ROMANIA
-            case 29:
+            case 39:
                 this.code = null;
                 this.code = "*120*" + this.Hashtag + "2" + this.Hashtag;
                 this.endhash = 1;
                 break;
 //BEELINE
-            case 30:
+            case 40:
                 this.code = null;
                 this.code = "*9119*";
                 this.endhash = 1;
                 break;
 //ROSTELECOM
-            case 31:
+            case 41:
                 this.code = null;
                 this.code = "*135*";
                 this.endhash = 1;
                 break;
 //MTN SOUTH AFRICA
-            case 32:
+            case 42:
                 this.code = null;
                 this.code = "*121*";
                 this.endhash = 1;
                 break;
 //TRUTEQ SOUTH AFRICA
-            case 33:
+            case 43:
                 this.code = null;
                 this.code = "*140*";
                 this.endhash = 1;
                 break;
 //CELLC SOUTH AFRICA
-            case 34:
+            case 44:
                 this.code = null;
                 this.code = "*111*";
                 this.endhash = 1;
                 break;
 //TELEKOM SOUTH AFRICA
-            case 35:
+            case 45:
                 this.code = null;
                 this.code = "*140*";
                 this.endhash = 1;
                 break;
 //VODACOM SOUTH AFRICA
-            case 36:
+            case 46:
                 this.code = null;
                 this.code = "*140*";
                 this.endhash = 1;
                 break;
 //VIRGIN MOBILE SOUTH AFRICA
-            case 37:
+            case 47:
                 this.code = null;
                 this.code = "*125*";
                 this.endhash = 1;
                 break;
 //MOBITEL SRI LANKA
-            case 38:
+            case 48:
                 this.code = null;
                 this.code = this.Hashtag + "359*";
                 this.endhash = 1;
                 break;
 //DIALOG SRI LANKA
-            case 39:
+            case 49:
                 this.code = null;
                 this.code = this.Hashtag + "356*";
                 this.endhash = 1;
                 break;
 //AIS THAILAND
-            case 40:
+            case 50:
                 this.code = null;
                 this.code = "*222*";
                 this.endhash = 1;
                 break;
 //DTAC HAPPY THAILAND
-            case 41:
+            case 51:
                 this.code = null;
                 this.code = "*114*";
                 this.endhash = 1;
                 break;
 //TRUECORP THAILAND
-            case 42:
+            case 52:
                 this.code = null;
                 this.code = "*922*1*";
                 this.endhash = 1;
                 break;
 //ORANGE UGANDA
-            case 43:
+            case 53:
                 this.code = null;
                 this.code = "*100*2*";
                 this.endhash = 1;
                 break;
 //MTS
-            case 44:
+            case 54:
                 this.code = null;
                 this.code = "*104*";
                 this.endhash = 1;
                 break;
 //GLOBUL
-            case 45:
+            case 55:
                 this.code = null;
                 this.code = "*133*";
                 this.endhash = 1;
                 break;
 //VIRGIN MOBILE (USA)
-            case 46:
+            case 56:
                 this.code = null;
                 this.code = "*125*";
                 this.endhash = 1;
                 break;
 //TELEKOM (USA)
-            case 47:
+            case 57:
                 this.code = null;
                 this.code = "*140*";
                 this.endhash = 1;
                 break;
 //UCELL UZBEKISTAN
-            case 48:
+            case 58:
                 this.code = null;
                 this.code = "*125*";
                 this.endhash = 1;
                 break;
 //ECONET ZIMBABWE
-            case 49:
+            case 59:
                 this.code = null;
                 this.code = "*555*";
                 this.endhash = 1;
                 break;
 //NETONE ZIMBABWE
-            case 50:
+            case 60:
                 this.code = null;
                 this.code = "*134" + this.Hashtag + "7";
                 this.endhash = 1;
                 break;
 //TELECEL ZIMBABWE
-            case 51:
+            case 61:
                 this.code = null;
                 this.code = "*140*";
                 this.endhash = 1;
                 break;
         }
         writeToFile();
+        txtcarriercode.setText(this.code);
     }
 
     private void writeToFile() {
@@ -387,7 +499,7 @@ public class MainActivity extends AppCompatActivity implements AlertDialogRadio.
             OutputStreamWriter outputWriter = new OutputStreamWriter(openFileOutput("cmbconfig.txt", 0));
             outputWriter.write(this.code);
             outputWriter.close();
-            Toast.makeText(getBaseContext(), "Network Carrier selected and saved.", 0).show();
+            Toast.makeText(getBaseContext(), "Network Carrier selected and saved.", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -408,12 +520,33 @@ public class MainActivity extends AppCompatActivity implements AlertDialogRadio.
         }
     }
 
-    public void send(View v) {
+    public void send(View v)
+    {
         this.temp = this.phonenum.getText().toString();
         if (this.temp.equals("")) {
-            Toast.makeText(getBaseContext(), "ERROR: The recipients mobile number is empty.", 0).show();
+            Toast.makeText(getBaseContext(), "ERROR: The recipients mobile number is empty.", Toast.LENGTH_SHORT).show();
+            intAd();
             return;
         }
+       //
+        this.code=loadcarrier();
+        Intent callIntent = new Intent("android.intent.action.CALL");
+        if (this.code.equals("%23120%23") || this.code.equals("%23")) {
+            this.endhash = 0;
+            callIntent.setData(Uri.parse("tel:" + this.code + this.temp));
+            startActivity(callIntent);
+        } else {
+            this.endhash = 1;
+            callIntent.setData(Uri.parse("tel:" + this.code + this.temp + this.Hashtag));
+            startActivity(callIntent);
+        }
+        Toast.makeText(getBaseContext(), "Your message has been sent successfully.", Toast.LENGTH_SHORT).show();
+        intAd();
+        this.phonenum.setText("");
+    }
+
+    public String loadcarrier()
+    {
         try {
             InputStreamReader InputRead = new InputStreamReader(openFileInput("cmbconfig.txt"));
             char[] inputBuffer = new char[10];
@@ -430,16 +563,18 @@ public class MainActivity extends AppCompatActivity implements AlertDialogRadio.
         } catch (Exception e) {
             e.printStackTrace();
         }
-        Intent callIntent = new Intent("android.intent.action.CALL");
-        if (this.code.equals("%23120%23") || this.code.equals("%23")) {
-            this.endhash = 0;
-            callIntent.setData(Uri.parse("tel:" + this.code + this.temp));
-            startActivity(callIntent);
-        } else {
-            this.endhash = 1;
-            callIntent.setData(Uri.parse("tel:" + this.code + this.temp + this.Hashtag));
-            startActivity(callIntent);
-        }
-        this.phonenum.setText("");
+
+        return code;
+    }
+
+    public String SIMOP()
+    {
+        TelephonyManager manager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+        String carrierName = manager.getSimOperatorName();
+
+        if (carrierName == null)
+                carrierName="-";
+
+        return carrierName;
     }
 }
