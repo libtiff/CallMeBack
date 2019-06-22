@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "672181613309",
+    "firebase_url": "https://callmebackapp-4e0f6.firebaseio.com",
+    "project_id": "callmebackapp-4e0f6",
+    "storage_bucket": "callmebackapp-4e0f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672181613309:android:2a6e896e2e5db155",
+        "android_client_info": {
+          "package_name": "libtiff.example.callmebackapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672181613309-ckra1vvpjh0j5rbvmqo808q8hp0m5250.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "libtiff.example.callmebackapp",
+            "certificate_hash": "6364b063146718a3e13c526661f3b4b5de4f582b"
+          }
+        },
+        {
+          "client_id": "672181613309-edr7eu8k0dr8neagaks6ktt6v6gre8p9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChwjyTAqRz_3YtjiLGCdDt4TkhgWjhDoQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672181613309-edr7eu8k0dr8neagaks6ktt6v6gre8p9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-9082725429338291~9699329161"
+    }
+  ],
+  "configuration_version": "1"
+}
