@@ -1,12 +1,16 @@
 package libtiff.example.callmebackapp;
 
+import android.Manifest;
+import android.app.Activity;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.TelephonyManager;
 import android.view.View;
@@ -43,6 +47,15 @@ public class MainActivity extends AppCompatActivity implements AlertDialogRadio.
     ImageButton send;
     String temp = "";
 
+    // Storage Permissions
+    private static final int REQUEST_CALL_PHONE = 1;
+    private static final int REQUEST_READ_CONTACTS= 1;
+    private static final int REQUEST_INTERNET= 1;
+    private static final int REQUEST_ACCESS_NETWORK_STATE= 1;
+
+    private static String[] PERMISSIONS_APP= {
+            Manifest.permission.CALL_PHONE,Manifest.permission.READ_CONTACTS,Manifest.permission.INTERNET,Manifest.permission.ACCESS_NETWORK_STATE
+    };
 
     class C07071 implements OnClickListener
     {
@@ -104,6 +117,7 @@ public class MainActivity extends AppCompatActivity implements AlertDialogRadio.
 
         ///////////////////////////////////////////////////////////////////////////////
         ((ImageButton) findViewById(R.id.btn_choose)).setOnClickListener(new C07071());
+        verifyStoragePermissions(MainActivity.this);
     }
 
     public void intAd(){
@@ -111,6 +125,37 @@ public class MainActivity extends AppCompatActivity implements AlertDialogRadio.
         {
             interstitialAd.show();
         }
+    }
+
+    public static void verifyStoragePermissions(Activity activity)
+    {
+        // Check if we have write permission
+        int callpermission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.CALL_PHONE);
+        int contactspermission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.READ_CONTACTS);
+        int netstatepermission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_NETWORK_STATE);
+        int internetpermission = ActivityCompat.checkSelfPermission(activity,Manifest.permission.INTERNET);
+
+        if (callpermission != PackageManager.PERMISSION_GRANTED)
+        {
+            // We don't have permission so prompt the user
+            ActivityCompat.requestPermissions(activity,PERMISSIONS_APP, REQUEST_CALL_PHONE);
+        }
+        else if (contactspermission!=PackageManager.PERMISSION_GRANTED)
+        {
+            // We don't have permission so prompt the user
+            ActivityCompat.requestPermissions(activity,PERMISSIONS_APP, REQUEST_READ_CONTACTS);
+        }
+        else if (netstatepermission!=PackageManager.PERMISSION_GRANTED)
+        {
+            // We don't have permission so prompt the user
+            ActivityCompat.requestPermissions(activity,PERMISSIONS_APP, REQUEST_ACCESS_NETWORK_STATE);
+        }
+        else if (internetpermission!=PackageManager.PERMISSION_GRANTED)
+        {
+            // We don't have permission so prompt the user
+            ActivityCompat.requestPermissions(activity,PERMISSIONS_APP, REQUEST_INTERNET);
+        }
+        Toast.makeText(activity, "Done. 0", Toast.LENGTH_SHORT).show();
     }
 
     public void onPositiveClick(int position) {

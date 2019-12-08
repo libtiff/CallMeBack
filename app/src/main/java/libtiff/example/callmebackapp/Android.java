@@ -18,7 +18,7 @@ public class Android {
                     "Cameroon (Orange)",
                     "Cyprus (CallSat)",
                     "Cyprus (Cyta)",
-                    "Cyprus (MTN)",
+                    "Cyprus (Epic)",
                     "Cyprus (PrimeTel)",
                     "Docomo (Tata Docomo)",
                     "Egypt (Etisalat)",
